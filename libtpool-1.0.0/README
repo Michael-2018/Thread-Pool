@@ -1,0 +1,25 @@
+** First step:
+   config compile option in the file: config.make
+   there are two platforms was supported: MIPS and X86, see the files: mips_env.mk and x86_env.mk
+
+** Second step:
+   make {clean,all,install}
+
+** And then:
+   We can to find the test program in the directory: ./bin
+
+** API:
+   tpool_service.h  FOR C
+   tpool_wrapper.h  FOR C++
+
+** API Usage:
+   Reference the test cases in the directory: ./test
+
+** Makefile
+   When you want to use this service in your source code, just including path in your makefile.
+
+   TPOOL_PATH = .
+   TPOOL_PATH_INC = $(TPOOL_PATH)/inc
+   TPOOL_PATH_SRC = $(TPOOL_PATH)/src
+
+   FLAGS += -I$(TPOOL_PATH_INC)
